@@ -3,13 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Hello World!</title>
+        <script type="text/javascript" src="functions.js"></script>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Explorer Enhancer</h1>
         <!-- All of the Node.js APIs are available in this renderer process. -->
-        We are using node <script>document.write(process.versions.node)</script>,
-        Chromium <script>document.write(process.versions.chrome)</script>,
-        and Electron <script>document.write(process.versions.electron)</script>.
+        List of all file from the test directory:<span id="list"></span>
     </body>
 
     <script>
@@ -17,17 +16,12 @@
         require('./renderer.js')
 
         const fs = require('fs');
-
         
-
-
-        function copypaste () {
-
-            fs.createReadStream('G:/Electron Projects/Explorer Enhancer/test/test.txt').pipe(fs.createWriteStream('G:/Electron Projects/Explorer Enhancer/test/new.txt'));
-
-        }
+        //copypaste();
         
-        copypaste();
+        readdir('G:/Users/Nico/Documents/Electron/Explorer-Enhancer/test');
+        
+        
 
     </script>
 </html>
