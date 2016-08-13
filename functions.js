@@ -1,6 +1,6 @@
-function copypaste(path1, path2) { //copie le contenu d'un fichier path1 et le colle dans un nouveau fichier path2
+function copypaste(src, dest) { //copie le contenu d'un fichier path1 et le colle dans un nouveau fichier path2
 
-    fs.createReadStream('path1').pipe(fs.createWriteStream('path2'));
+    fs.createReadStream(src).pipe(fs.createWriteStream(dest));
 
 }
 
